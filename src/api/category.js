@@ -7,7 +7,7 @@ let cancel
 export const getCategoryContent = (id) => {
   cancel && cancel('取消了前一次请求')
   cancel = null
-  return axios.get(`http://www.imooc.com/api/category/content/${id}`,{
+  return axios.get(`https://www.imooc.com/api/category/content/${id}`,{
     timeout: TIMEOUT,
     cancelToken: new CancelToken(function executor(c) {
       cancel = c

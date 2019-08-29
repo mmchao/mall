@@ -18,7 +18,7 @@ const shuffle = (arr) => {
 }
 
 export const getHomeSlider = () => {
-  return axios.get('http://www.imooc.com/api/home/slider',{
+  return axios.get('https://www.imooc.com/api/home/slider',{
     timeout: TIMEOUT
   }).then(res => {
     if (res.data.code === SUCC_CODE) {
