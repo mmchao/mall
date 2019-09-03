@@ -4,7 +4,7 @@
       <keep-alive>
         <router-view/>
       </keep-alive>
-      <div class="g-footer-container">
+      <div class="g-footer-container" v-show="$route.meta.showFooter">
       	<c-tabbar></c-tabbar>
       </div>
     </div>

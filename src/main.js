@@ -16,10 +16,16 @@ Vue.use(VueLazyload, {
   loading: require('@/assets/img/loading.gif'),
   attempt: 1
 })
-
+router.beforeEach((to, from ,next) => {
+  if (to.meta.title) {
+    document.title = to.meta.title
+  }
+  next()
+})
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
   render: h => h(App)
+  
 })
